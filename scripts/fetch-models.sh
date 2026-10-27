@@ -7,7 +7,6 @@
 # Each file is checked against a sha256 pinned here (2026-10-18; beat_this.onnx's
 # matches the release's own .sha256). A download that doesn't match is deleted and
 # the script fails, and a file already there that doesn't match is fetched again.
-# Tested by test-fetch-models.sh.
 set -euo pipefail
 DIR="$HOME/Library/Application Support/tempo/models"
 REPO=danigb/beat-this-rs

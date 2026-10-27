@@ -36,7 +36,7 @@ cargo test
 cargo run --release --example eval -- eval/groove-holdout.tsv
 ```
 
-The eval lists are in `eval/*.tsv`; every scored run is logged in `eval/history.tsv` (its commit ids point at the private looper repo this was lifted from, so they will not resolve here). Every experiment, kept or killed, is in [`LAB.md`](LAB.md).
+The eval lists are in `eval/*.tsv`; `lab.py` and `live.py` log each scored run. The history in `LAB.md` cites commit ids from the private looper repo this was lifted from, so they will not resolve here. Every experiment, kept or killed, is in [`LAB.md`](LAB.md).
 
 ## Credits
 

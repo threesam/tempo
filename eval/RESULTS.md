@@ -1,9 +1,9 @@
 # Tempo ears: scores
 
 The newest results first. The working notes behind every number (hypotheses,
-what was kept and killed, the Codex rounds) are in `tempo/LAB.md`. Every run is
-logged in `history.tsv` (one read at a time, `lab.py`) and `live-history.tsv`
-(the live replay, `live.py`).
+what was kept and killed, the Codex rounds) are in `tempo/LAB.md`. Runs are
+logged by `lab.py` (one read at a time) and `live.py` (the live replay); the
+original logs stayed in the private repo.
 
 ## 2026-10-18: the mic's beat, which half of the grid (E17)
 

@@ -2,9 +2,12 @@
 
 The working notebook for the tempo ear: what the problem is, what we believe,
 what we tried, what the numbers said. Every experiment gets an entry, kept or
-not. `../eval/RESULTS.md` holds the headline scores, and `../eval/history.tsv`
-holds one machine-readable line per scored run, so we can see over time what
-got better and what broke.
+not. `eval/RESULTS.md` holds the headline scores.
+
+> Written in the private drum-looper repo this was lifted from. The per-run logs
+> (`history.tsv`, `live-history.tsv`), the Rust-vs-Python parity example and the
+> download-script tests it mentions, and the commit ids it cites, stayed there.
+> `lab.py` and `live.py` start fresh logs when run.
 
 ## The goal
 
