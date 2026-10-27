@@ -1,11 +1,10 @@
 # ear set metric floor%   — the regression gate for the Rust ears (one 10 s read at a time):
-#   cargo run --release -p tempo --example eval -- eval/groove-dev.tsv eval/macleod-dev.tsv eval/takes.tsv --only full,grid --check eval/floors.tsv
+#   cargo run --release --example eval -- eval/groove-dev.tsv eval/macleod-dev.tsv --only full --check eval/floors.tsv
 # A few points under the 2026-10-18 scores (full: groove-dev exact 97, acc1 99, meter 90; macleod-dev acc1 73,
-# acc2 88; grid: takes acc2 100 of 12). Raise them as the ears get better. A floor naming a set the run
+# acc2 88). Raise them as the ears get better. A floor naming a set the run
 # didn't score fails. The live numbers are eval/live.py's.
 full   groove-dev   exact  94
 full   groove-dev   acc1   96
 full   groove-dev   meter  85
 full   macleod-dev  acc1   68
 full   macleod-dev  acc2   84
-grid   takes        acc2   85

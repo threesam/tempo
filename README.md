@@ -24,18 +24,19 @@ Holdout sets, sealed until the configuration was frozen and scored once (details
 | MacLeod drum songs, audited labels | 56 | 55 (98.2%) | 90.6–99.7% |
 | free-stock-music.com, every track (a second source) | 133 | 124 (93.2%) | 87.6–96.4% |
 
-"Right" means within 1 BPM of the label, or of double or half it. The goal was 99% within 1 BPM. Drummer takes are consistent with that, but 80 tracks can only prove 95.4%. Songs are not there on raw labels: the misses are mostly disputed labels and meters (waltzes, blues shuffles, swung hip-hop).
+"Right" means within 1 BPM of the label, or of double or half it (in the looper a knob picks the octave). The headline numbers come from the live replay protocol in [`LAB.md`](LAB.md) (`eval/live.py`); the example below scores independent 10 s windows, a stricter and simpler read. The goal was 99% within 1 BPM. Drummer takes are consistent with that, but 80 tracks can only prove 95.4%. Songs are not there on raw labels: the misses are mostly disputed labels and meters (waltzes, blues shuffles, swung hip-hop).
 
 ## Try it
 
 ```sh
 scripts/fetch-models.sh                     # Beat This! models, sha256-pinned, ~93 MB
-eval/fetch-all.sh                           # the eval audio (not in git)
+eval/fetch-all.sh                           # Groove and MacLeod audio (not in git); rewrites eval/groove-*.tsv and macleod-*.tsv
+python3 -I eval/fetch-fsm.py 150          # the free-stock-music.com set (crawls the site; rewrites eval/fsm-holdout.tsv)
 cargo test
 cargo run --release --example eval -- eval/groove-holdout.tsv
 ```
 
-The eval lists are in `eval/*.tsv`; every scored run is logged in `eval/history.tsv`. Every experiment, kept or killed, is in [`LAB.md`](LAB.md).
+The eval lists are in `eval/*.tsv`; every scored run is logged in `eval/history.tsv` (its commit ids point at the private looper repo this was lifted from, so they will not resolve here). Every experiment, kept or killed, is in [`LAB.md`](LAB.md).
 
 ## Credits
 

@@ -38,6 +38,7 @@ impl Onsets {
 
     /// Feed one mono sample; every hop returns that hop's onset strength.
     pub fn push(&mut self, x: f32) -> Option<f32> {
+        let x = if x.is_finite() { x } else { 0.0 };
         self.lp += self.a * (x - self.lp);
         let h = x - self.lp;
         self.lo += self.lp * self.lp;
@@ -206,6 +207,14 @@ mod tests {
     use super::*;
 
     const SR: u32 = 48_000;
+
+    #[test]
+    fn one_nan_sample_doesnt_poison_the_onsets() {
+        let mut o = Onsets::new(SR);
+        o.push(f32::NAN);
+        let all: Vec<f32> = (0..SR).filter_map(|i| o.push(if i % 4800 < 50 { 0.5 } else { 0.0 })).collect();
+        assert!(all.iter().all(|f| f.is_finite()) && all.iter().any(|&f| f > 0.0));
+    }
 
     /// A beatbox-ish bar: boom on 1 and the "and" of 2, snare noise on 2 and 4,
     /// hats on every eighth, a little background hiss — at `bpm` for `secs`.

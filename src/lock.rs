@@ -73,8 +73,8 @@ impl Lock {
         let mut now: Vec<f32> = self.recent.iter().map(|&x| nearest_octave(x, l)).collect();
         now.sort_by(f32::total_cmp);
         let &refr = now.get(now.len() / 2)?; // no short reads: nothing to agree with
-        if (f / refr - 1.0).abs() >= ANCHOR {
-            return None;
+        if !((f / refr - 1.0).abs() < ANCHOR) {
+            return None; // also NaN
         }
         (self.anchored, self.locked) = (true, Some(f));
         (b.bpm, b.meter) = (f, self.meter());
@@ -201,6 +201,14 @@ mod tests {
             l.short(beat(bpm));
         }
         assert!(l.long(beat(120.1)).is_some());
+    }
+
+    #[test]
+    fn a_nan_long_read_doesnt_anchor() {
+        let mut l = Lock::new(2);
+        l.short(beat(120.0));
+        l.short(beat(120.0));
+        assert!(l.long(beat(f32::NAN)).is_none());
     }
 
     #[test]

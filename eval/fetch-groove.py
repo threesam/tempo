@@ -57,6 +57,8 @@ class Remote(io.RawIOBase):
         while got < n:
             i, o = divmod(self.pos + got, 1 << 20)
             chunk = self.block(i)[o : o + n - got]
+            if not chunk:
+                raise OSError(f"empty range response at byte {self.pos + got}")
             b[got : got + len(chunk)] = chunk
             got += len(chunk)
         self.pos += n

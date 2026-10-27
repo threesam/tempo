@@ -172,6 +172,9 @@ impl Listener {
     }
 
     pub fn hear(&self, chunk: Vec<f32>) {
+        if chunk.is_empty() {
+            return; // empty means reset to the worker; `reset` bumps the generation too
+        }
         let _ = self.tx.send((chunk, Instant::now()));
     }
 
