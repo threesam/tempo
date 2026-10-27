@@ -1,0 +1,49 @@
+date	git	experiment	estimator	lock	refine	model	set	protocol	n	exact_any	exact	drift30	acc1	acc2	meter	none	aud
+2026-10-17 22:26	97e1f65	E2 lock skips empty reads (as live)	linefit_seq	drumkit	none	full	groove-dev	P1	1272	97.0	96.7	88.1	98.5	98.8	92.0	0	97.0
+2026-10-17 22:26	97e1f65	E2 lock skips empty reads (as live)	linefit_seq	drumkit	none	full	groove-dev	P2	120	98.3	98.3	90.0	100.0	100.0	90.0	0	98.3
+2026-10-17 22:26	97e1f65	E2 lock skips empty reads (as live)	linefit_seq	drumkit	none	full	groove-dev	P3	120	100.0	100.0	100.0	100.0	100.0	97.5	0	100.0
+2026-10-17 22:26	97e1f65	E2 lock skips empty reads (as live)	linefit_seq	drumkit	none	full	macleod-dev	P1	1309	72.2	56.1	65.2	66.8	85.0	nan	13	78.4
+2026-10-17 22:26	97e1f65	E2 lock skips empty reads (as live)	linefit_seq	drumkit	none	full	macleod-dev	P2	120	77.5	59.2	73.3	70.8	90.8	nan	5	85.7
+2026-10-17 22:26	97e1f65	E2 lock skips empty reads (as live)	linefit_seq	drumkit	none	full	macleod-dev	P3	120	75.8	62.5	67.5	73.3	88.3	nan	1	82.9
+2026-10-17 22:26	97e1f65	E3 (Codex 2) onset refinement, corrected clock	linefit_seq	drumkit	onset	full	groove-dev	P1	1272	97.0	96.7	88.1	98.5	98.8	92.0	0	97.0
+2026-10-17 22:26	97e1f65	E3 (Codex 2) onset refinement, corrected clock	linefit_seq	drumkit	onset	full	groove-dev	P2	120	96.7	96.7	88.3	100.0	100.0	90.0	0	96.7
+2026-10-17 22:26	97e1f65	E3 (Codex 2) onset refinement, corrected clock	linefit_seq	drumkit	onset	full	groove-dev	P3	120	97.5	97.5	88.3	100.0	100.0	97.5	0	97.5
+2026-10-17 22:26	97e1f65	E3 (Codex 2) onset refinement, corrected clock	linefit_seq	drumkit	onset	full	macleod-dev	P1	1309	72.2	56.1	65.2	66.8	85.0	nan	13	78.4
+2026-10-17 22:26	97e1f65	E3 (Codex 2) onset refinement, corrected clock	linefit_seq	drumkit	onset	full	macleod-dev	P2	120	79.2	60.8	70.0	70.8	90.8	nan	5	85.7
+2026-10-17 22:26	97e1f65	E3 (Codex 2) onset refinement, corrected clock	linefit_seq	drumkit	onset	full	macleod-dev	P3	120	75.0	60.8	66.7	73.3	88.3	nan	1	81.0
+2026-10-17 22:26	97e1f65	E4 one line fit through all reads' beats on one clock	linefit_seq	union	none	full	groove-dev	P1	1272	97.0	96.7	88.1	98.5	98.8	92.0	0	97.0
+2026-10-17 22:26	97e1f65	E4 one line fit through all reads' beats on one clock	linefit_seq	union	none	full	groove-dev	P2	120	85.8	85.8	85.0	90.0	90.8	80.0	0	85.8
+2026-10-17 22:26	97e1f65	E4 one line fit through all reads' beats on one clock	linefit_seq	union	none	full	groove-dev	P3	120	100.0	100.0	100.0	100.0	100.0	97.5	0	100.0
+2026-10-17 22:26	97e1f65	E4 one line fit through all reads' beats on one clock	linefit_seq	union	none	full	macleod-dev	P1	1309	72.2	56.1	65.2	66.8	85.0	nan	13	78.4
+2026-10-17 22:26	97e1f65	E4 one line fit through all reads' beats on one clock	linefit_seq	union	none	full	macleod-dev	P2	120	50.8	33.3	46.7	45.8	70.8	nan	1	58.1
+2026-10-17 22:26	97e1f65	E4 one line fit through all reads' beats on one clock	linefit_seq	union	none	full	macleod-dev	P3	120	75.8	62.5	67.5	73.3	88.3	nan	1	82.9
+2026-10-17 22:26	97e1f65	E5 reads pick the level, the 30 s read sets the period	linefit_seq	lock+long	none	full	groove-dev	P1	1272	97.0	96.7	88.1	98.5	98.8	92.0	0	97.0
+2026-10-17 22:26	97e1f65	E5 reads pick the level, the 30 s read sets the period	linefit_seq	lock+long	none	full	groove-dev	P2	120	100.0	100.0	100.0	100.0	100.0	90.0	0	100.0
+2026-10-17 22:26	97e1f65	E5 reads pick the level, the 30 s read sets the period	linefit_seq	lock+long	none	full	groove-dev	P3	120	100.0	100.0	100.0	100.0	100.0	97.5	0	100.0
+2026-10-17 22:26	97e1f65	E5 reads pick the level, the 30 s read sets the period	linefit_seq	lock+long	none	full	macleod-dev	P1	1309	72.2	56.1	65.2	66.8	85.0	nan	13	78.4
+2026-10-17 22:26	97e1f65	E5 reads pick the level, the 30 s read sets the period	linefit_seq	lock+long	none	full	macleod-dev	P2	120	80.8	63.3	72.5	70.0	90.0	nan	5	88.6
+2026-10-17 22:26	97e1f65	E5 reads pick the level, the 30 s read sets the period	linefit_seq	lock+long	none	full	macleod-dev	P3	120	75.8	62.5	67.5	73.3	88.3	nan	1	82.9
+2026-10-18 01:22	5495cb1	E12 split-beat dedup (+E5 lock+long)	linefit_seq2	lock+long	none	full	groove-dev	P1	1272	98.0	97.6	88.6	99.1	99.4	92.0	0	98.0
+2026-10-18 01:22	5495cb1	E12 split-beat dedup (+E5 lock+long)	linefit_seq2	lock+long	none	full	groove-dev	P2	120	100.0	100.0	100.0	100.0	100.0	90.8	0	100.0
+2026-10-18 01:22	5495cb1	E12 split-beat dedup (+E5 lock+long)	linefit_seq2	lock+long	none	full	groove-dev	P3	120	100.0	100.0	100.0	100.0	100.0	97.5	0	100.0
+2026-10-18 01:22	5495cb1	E12 split-beat dedup (+E5 lock+long)	linefit_seq2	lock+long	none	full	macleod-dev	P1	1309	76.3	59.6	68.1	70.2	88.8	nan	13	83.0
+2026-10-18 01:22	5495cb1	E12 split-beat dedup (+E5 lock+long)	linefit_seq2	lock+long	none	full	macleod-dev	P2	120	79.2	62.5	71.7	72.5	91.7	nan	3	85.7
+2026-10-18 01:22	5495cb1	E12 split-beat dedup (+E5 lock+long)	linefit_seq2	lock+long	none	full	macleod-dev	P3	120	76.7	63.3	70.0	75.8	90.8	nan	1	83.8
+2026-10-18 01:22	5495cb1	E12b long read must be steady (LONG_Q=0.9): no change, killed	linefit_seq2	lock+long	none	full	groove-dev	P1	1272	98.0	97.6	88.6	99.1	99.4	92.0	0	98.0
+2026-10-18 01:22	5495cb1	E12b long read must be steady (LONG_Q=0.9): no change, killed	linefit_seq2	lock+long	none	full	groove-dev	P2	120	100.0	100.0	100.0	100.0	100.0	90.8	0	100.0
+2026-10-18 01:22	5495cb1	E12b long read must be steady (LONG_Q=0.9): no change, killed	linefit_seq2	lock+long	none	full	groove-dev	P3	120	100.0	100.0	100.0	100.0	100.0	97.5	0	100.0
+2026-10-18 01:22	5495cb1	E12b long read must be steady (LONG_Q=0.9): no change, killed	linefit_seq2	lock+long	none	full	macleod-dev	P1	1309	76.3	59.6	68.1	70.2	88.8	nan	13	83.0
+2026-10-18 01:22	5495cb1	E12b long read must be steady (LONG_Q=0.9): no change, killed	linefit_seq2	lock+long	none	full	macleod-dev	P2	120	79.2	62.5	71.7	72.5	91.7	nan	3	85.7
+2026-10-18 01:22	5495cb1	E12b long read must be steady (LONG_Q=0.9): no change, killed	linefit_seq2	lock+long	none	full	macleod-dev	P3	120	76.7	63.3	70.0	75.8	90.8	nan	1	83.8
+2026-10-18 01:57	5495cb1	E12 ablation: 0.21 s gap filter only (no dedup)	linefit_seq_g21	lock+long	none	full	groove-dev	P1	1272	97.0	96.7	88.1	98.5	98.8	92.0	0	97.0
+2026-10-18 01:57	5495cb1	E12 ablation: 0.21 s gap filter only (no dedup)	linefit_seq_g21	lock+long	none	full	groove-dev	P2	120	100.0	100.0	100.0	100.0	100.0	90.0	0	100.0
+2026-10-18 01:57	5495cb1	E12 ablation: 0.21 s gap filter only (no dedup)	linefit_seq_g21	lock+long	none	full	groove-dev	P3	120	100.0	100.0	100.0	100.0	100.0	97.5	0	100.0
+2026-10-18 01:57	5495cb1	E12 ablation: 0.21 s gap filter only (no dedup)	linefit_seq_g21	lock+long	none	full	macleod-dev	P1	1309	72.1	56.1	65.2	66.8	84.8	nan	13	79.0
+2026-10-18 01:57	5495cb1	E12 ablation: 0.21 s gap filter only (no dedup)	linefit_seq_g21	lock+long	none	full	macleod-dev	P2	120	80.8	63.3	72.5	70.0	90.0	nan	5	89.4
+2026-10-18 01:57	5495cb1	E12 ablation: 0.21 s gap filter only (no dedup)	linefit_seq_g21	lock+long	none	full	macleod-dev	P3	120	75.8	62.5	67.5	73.3	88.3	nan	1	83.7
+2026-10-18 01:58	5495cb1	E12c nearest-mark dedup: KILLED	linefit_seq2	lock+long	none	full	groove-dev	P1	1272	98.0	97.7	88.6	99.1	99.4	92.1	0	98.0
+2026-10-18 01:58	5495cb1	E12c nearest-mark dedup: KILLED	linefit_seq2	lock+long	none	full	groove-dev	P2	120	100.0	100.0	100.0	100.0	100.0	90.8	0	100.0
+2026-10-18 01:58	5495cb1	E12c nearest-mark dedup: KILLED	linefit_seq2	lock+long	none	full	groove-dev	P3	120	100.0	100.0	100.0	100.0	100.0	97.5	0	100.0
+2026-10-18 01:58	5495cb1	E12c nearest-mark dedup: KILLED	linefit_seq2	lock+long	none	full	macleod-dev	P1	1309	76.5	59.9	68.6	70.3	88.9	nan	13	84.0
+2026-10-18 01:58	5495cb1	E12c nearest-mark dedup: KILLED	linefit_seq2	lock+long	none	full	macleod-dev	P2	120	78.3	61.7	71.7	71.7	90.8	nan	4	86.5
+2026-10-18 01:58	5495cb1	E12c nearest-mark dedup: KILLED	linefit_seq2	lock+long	none	full	macleod-dev	P3	120	76.7	63.3	70.0	75.8	90.8	nan	1	84.6

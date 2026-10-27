@@ -1,0 +1,5 @@
+/target
+/eval/data/
+/eval/cache/
+__pycache__/
+*.part

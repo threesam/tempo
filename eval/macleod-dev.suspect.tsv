@@ -1,0 +1,4 @@
+# file	label	measured  (live replay 2026-10-18: steady reads all through, far from the label; not caught by audit.py, whose rule only flags 1-3 BPM)
+data/macleod/Waunobe-March-ISRC-USUAN1100016.mp3	102	112.0
+data/macleod/Fireflies-and-Stardust-ISRC-USUAN1600061.mp3	170	140.0
+data/macleod/Circus-Tent-ISRC-USUAN1100769.mp3	144	142.0

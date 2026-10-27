@@ -1,0 +1,14 @@
+[package]
+name = "tempo"
+version = "0.1.0"
+edition = "2021"
+description = "Hear the tempo, the beat and the bar of whatever is playing"
+license = "MIT"
+publish = false
+
+[dependencies]
+# Beat This! (ISMIR 2024) via its pure-Rust port; models fetched by scripts/fetch-models.sh
+beat-this = { version = "=1.1.0", default-features = false }
+
+[dev-dependencies]
+beat-this = { version = "=1.1.0", default-features = false, features = ["decode"] }
