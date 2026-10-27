@@ -3,7 +3,7 @@
 //! within 1% of the last five short reads anchors it, and from then on short
 //! reads only move the phase — unless five in a row agree somewhere else, a
 //! real tempo change, which drops the anchor and re-locks there. Tempos are in
-//! the ear's units (drumkit applies its knob and loop octave on top).
+//! the ear's units (the looper applies its knob and loop octave on top).
 
 use crate::{nearest_octave, Beat};
 
@@ -213,7 +213,7 @@ mod tests {
 
     #[test]
     fn the_short_reads_follow_the_lock_up_an_octave() {
-        // drumkit moves the lock to a loop's octave (locked = 240): the short reads
+        // the looper moves the lock to a loop's octave (locked = 240): the short reads
         // heard at 120 still count, an octave up
         let mut l = Lock::new(2);
         l.short(beat(120.0));
@@ -246,7 +246,7 @@ mod tests {
     #[test]
     fn a_long_read_with_no_short_reads_to_agree_with_doesnt_anchor() {
         // E9b anchors on agreement with the short reads; the owner can set `locked`
-        // before any (drumkit does on a new ear)
+        // before any (the looper does on a new ear)
         let mut l = Lock::new(2);
         l.locked = Some(120.0);
         assert!(l.long(beat(120.5)).is_none());

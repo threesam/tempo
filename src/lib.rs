@@ -2,7 +2,7 @@
 //! - `dsp`: onset flux + autocorrelation. Cheap, runs every half second, first to guess.
 //! - `neural`: Beat This! (Foscarin, Schlüter & Widmer, ISMIR 2024), a transformer that
 //!   marks beats AND downbeats, so it also knows the bar and where the "one" is.
-//! - `grid`: chop's grid finder for a fresh take (beatbox, hits): Beat This! is trained
+//! - `grid`: the grid finder for a fresh take (beatbox, hits): Beat This! is trained
 //!   on recorded music and mostly hears no beat in a mouth; the grid finder does.
 //! `eval` (examples/eval.rs) scores them against recordings with a known tempo.
 

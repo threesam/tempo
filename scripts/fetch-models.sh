@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Beat This! (Foscarin, Schlüter & Widmer, ISMIR 2024; MIT) model files for the
 # tempo tracker, via the beat-this-rs port. Not in git (10 + 83 MB): fetched once
-# into ~/Library/Application Support/tempo/models, where drumkit and the eval read them.
+# into ~/Library/Application Support/tempo/models, where the looper and the eval read them.
 #  - mel_spectrogram.onnx, beat_this_small.onnx: the repo's committed copies, pinned to a commit
 #  - beat_this.onnx: the full model from the repo's model-large release
 # Each file is checked against a sha256 pinned here (2026-10-18; beat_this.onnx's

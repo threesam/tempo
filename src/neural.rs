@@ -19,7 +19,7 @@ pub const FIRST_S: f32 = 5.0;
 pub const LONG_S: f32 = 30.0;
 pub const LONG_MIN_S: f32 = 15.0;
 const LONG_EVERY_S: f32 = 15.0;
-/// Mean square below this is silence (drumkit's quiet Mac): nothing to hear, so
+/// Mean square below this is silence (a quiet Mac): nothing to hear, so
 /// the model doesn't run.
 const SILENT: f32 = 1e-6;
 
@@ -40,7 +40,7 @@ impl Neural {
         let beat = dir.join(if full { "beat_this.onnx" } else { "beat_this_small.onnx" });
         BeatThis::new(&RtenRuntime, &dir.join("mel_spectrogram.onnx"), &beat)
             .map(|bt| Neural { bt })
-            .map_err(|e| format!("{e} (run maschine/scripts/fetch-models.sh)"))
+            .map_err(|e| format!("{e} (run scripts/fetch-models.sh)"))
     }
 
     /// The beat in `mono` (any rate), as of its last sample.
@@ -221,7 +221,7 @@ pub fn from_marks(beats: &[f32], downbeats: &[f32], end: f32) -> Option<Beat> {
     let fit = line(tail);
     let last = fit.map_or(tail[tail.len() - 1].1, |(p, c)| c + p * tail[tail.len() - 1].0);
     // The "one" on that same line: the downbeat says which beat, the fit says when
-    // (a raw downbeat mark is as edge-noisy as a raw beat, and drumkit anchors its
+    // (a raw downbeat mark is as edge-noisy as a raw beat, and the looper anchors its
     // clock on it).
     let one = downbeats.last().map(|&d| fit.map_or(d, |(p, c)| c + p * ((d - c) / p).round()));
     let mut bars = [0usize; 8];
@@ -513,7 +513,7 @@ mod tests {
 
     #[test]
     fn a_reset_says_whether_anyone_is_listening() {
-        // the thread ends when the model won't load: drumkit must make a new listener
+        // the thread ends when the model won't load: the looper must make a new listener
         // then, not keep the dead one until it restarts (Codex, /rev)
         let (dead, _, _) = listener();
         assert!(!dead.reset());

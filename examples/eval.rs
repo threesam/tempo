@@ -1,6 +1,6 @@
 //! Score the tempo ears against recordings with a known tempo.
 //!
-//!   cargo run --release --example eval -- eval/groove.tsv eval/macleod.tsv
+//!   cargo run --release --example eval -- eval/groove-holdout.tsv
 //!     [--window 10] [--listens 3] [--only dsp,small,full,grid]
 //!     [--speeds 0.8,1,1.25] [--check eval/floors.tsv]
 //!
@@ -18,8 +18,8 @@
 //! `ear set metric floor` line of the file scores below its floor: a regression gate.
 //!
 //! Ears: dsp (the first onset tracker, now the baseline), small / full (Beat
-//! This!), grid (chop's grid finder for a fresh take: hits → grid step, read as
-//! 8th notes). drumkit listens to the Mac with full and to the mic with grid.
+//! This!), grid (the grid finder for a fresh take: hits → grid step, read as
+//! 8th notes). the looper listens to the Mac with full and to the mic with grid.
 
 use std::path::Path;
 use std::time::Instant;

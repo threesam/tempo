@@ -4,7 +4,7 @@
 //!   cargo run --release --example dump -- eval/groove-dev.tsv … [--model full|small] [--causal]
 //!
 //! Per file: one 30 s stretch (from 25% in, at least 5 s, so a song's intro is
-//! skipped), heard the way drumkit hears it — a 10 s listen every 2 s (11 of
+//! skipped), heard the way the looper hears it — a 10 s listen every 2 s (11 of
 //! them) — plus one 30 s listen of the whole stretch, plus the onset curve of the
 //! first tracker. Written to eval/cache/<model>/<file>.json; existing files are kept.
 //!

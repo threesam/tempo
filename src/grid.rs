@@ -1,6 +1,6 @@
 //! The grid finder for a fresh take (a voice memo of mouth sounds, beatbox): find the hits,
-//! then the grid of steps they sit on. Pure: no audio I/O. Lifted from the `chop` crate
-//! of the drum looper this was built for.
+//! then the grid of steps they sit on. Pure: no audio I/O. Lifted from `chop`, a crate of
+//! the drum looper this was built for.
 
 /// One detected sound, as a sample range in the source recording.
 #[derive(Clone, Copy, Debug, PartialEq)]

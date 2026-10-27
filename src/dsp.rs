@@ -1,4 +1,4 @@
-//! Tempo by ear: hold TEMPO and drumkit listens (mic + the Mac's sound) and
+//! Tempo by ear: hold TEMPO and the looper listens (mic + the Mac's sound) and
 //! names the BPM of whatever's playing, beatboxing included.
 //!
 //! Two halves. `Onsets` runs per sample (cheap enough for the audio thread):

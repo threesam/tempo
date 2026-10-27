@@ -9,7 +9,7 @@ logged in `history.tsv` (one read at a time, `lab.py`) and `live-history.tsv`
 
 The mic's ear reads a take as 8ths, with the beat on every other line. That
 line was the newest hit's, so a take ending on an "and" ticked on the "and".
-Now it's the half with more hits (`tempo/examples/grid_phase.rs`):
+Now it's the half with more hits (`examples/grid_phase.rs`):
 
 | Set | Before | Now |
 |---|---|---|
@@ -39,14 +39,14 @@ then scored in one logged run.
   (×3, ×1.5, ×⅔ on a waltz, blues shuffles and swung hip-hop). They go to the
   blind A/B before any claim rests on them.
 
-## 2026-10-18: live, as drumkit hears it (dev sets)
+## 2026-10-18: live, as the looper hears it (dev sets)
 
 `live.py` re-hears each track from its first second, the way TEMPO does:
 - a 10 s read every second;
 - a 30 s read every 15 s;
 - nothing for 3.4 s while a long read runs.
 
-The Rust code drumkit ships replays identically (`tempo/examples/replay.rs`, 0
+The Rust code the looper ships replays identically (`examples/replay.rs`, 0
 mismatches).
 
 | Set | Tracks | Right at the end | Time on a correct tempo (from 15 s) | Ticks on the beat |
@@ -70,7 +70,7 @@ How it got there (one line each; details in LAB.md):
 - E1: number each beat from the one before it.
 - E9 / E9b: the 30 s read is the authority, once it agrees within 1% with
   the short reads.
-- E10: a clock bug fixed: it ran on a stale period, in drumkit too.
+- E10: a clock bug fixed: it ran on a stale period, in the looper too.
 - E11: phase from the last 8 beats' line, and re-phase only on two agreeing
   reads.
 - E12: drop split beats before numbering.
@@ -96,9 +96,9 @@ Beat This! marks beats on 20 ms frames. What that costs:
     gain, because the model is trained not to care about a frame or two.
   - E16: snapping beats to the audio's attacks at 1 ms. Worse, because it
     chases each hit's human wobble.
-- **Scale:** drumkit's LEDs redraw every 33 ms and the tempo widget every 17 ms.
+- **Scale:** the looper's LEDs redraw every 33 ms and the tempo widget every 17 ms.
 
-## 2026-10-17: one read at a time (`tempo/examples/eval.rs`)
+## 2026-10-17: one read at a time (`examples/eval.rs`)
 
 How close each ear gets to a known tempo. A listen is 10 s, three per file,
 spread across it.
@@ -118,7 +118,7 @@ spread across it.
 | Beat This! full | macleod (40 mixed songs) | 120 | 63% | 72% | 88% | – | 346 |
 | Beat This! small | macleod | 120 | 55% | 64% | 84% | – | 240 |
 | first DSP tracker | macleod | 120 | 41% | 50% | 57% | – | 5 |
-| grid (chop) | takes (4 of Sam's beatbox takes × 5 speeds) | 20 | 40% | 40% | 95% | – | 2 |
+| grid | takes (4 of Sam's beatbox takes × 5 speeds) | 20 | 40% | 40% | 95% | – | 2 |
 | Beat This! full | takes | 20 | 5% | 15% | 30% | 33% | 283 |
 
 What it showed:
@@ -130,7 +130,7 @@ What it showed:
   which listeners argue over too. The TEMPO knob halves or doubles.
 - 6/8 is felt in dotted quarters: Beat This! hears 46.9 for a "70" 6/8 take, and
   that's right. The eval counts compound meters that way.
-- On a mouth, Beat This! (trained on recorded music) mostly hears no beat. chop's
+- On a mouth, Beat This! (trained on recorded music) mostly hears no beat. the grid finder's
   grid finder hears the pulse in 95% of takes, so the mic listens with that.
 - Listen length (full model): 5 s → 65% exact, 7 s → 74%, 10 s → 79%, 15 s → 78%.
 
